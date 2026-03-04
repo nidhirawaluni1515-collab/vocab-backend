@@ -1,28 +1,10 @@
 package nue.vocab.backend.routes;
 
-import nue.vocab.backend.model.Category;
-import nue.vocab.backend.service.CategoryService;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-
-@RestController
-@RequestMapping("/api/categories")
 public class CategoryRoutes {
+    private static final String BASE = "/api/categories";
 
-    private final CategoryService service;
-
-    public CategoryRoutes(CategoryService service) {
-        this.service = service;
-    }
-
-    @GetMapping
-    public List<Category> getAll() {
-        return service.getAll();
-    }
-
-    @PostMapping
-    public Category create(@RequestBody Category category) {
-        return service.create(category);
-    }
+    public static final String GET_ALL   = BASE + "/all";
+    public static final String GET_BY_ID = BASE + "/{id}";
+    public static final String CREATE    = BASE + "/add";
+    public static final String DELETE    = BASE + "/remove/{id}";
 }
