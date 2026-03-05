@@ -8,3 +8,4 @@ public class CategoryRoutes {
     public static final String CREATE    = BASE + "/add";
     public static final String DELETE    = BASE + "/remove/{id}";
 }
+

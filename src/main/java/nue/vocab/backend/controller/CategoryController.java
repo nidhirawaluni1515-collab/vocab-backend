@@ -8,6 +8,7 @@ import nue.vocab.backend.model.Category;
 import nue.vocab.backend.routes.CategoryRoutes;
 import java.util.List;
 
+
 @RestController
 public class CategoryController {
 
